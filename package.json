@@ -40,7 +40,7 @@
     "livekit-client": "^1.14.2",
     "livekit-server-sdk": "^1.2.7",
     "lucide-react": "^0.290.0",
-    "next": "13.4.2",
+    "next": "13.5.5",
     "next-themes": "^0.2.1",
     "query-string": "^8.1.0",
     "react": "^18",
