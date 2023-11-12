@@ -1,8 +1,10 @@
 import "./globals.css";
 
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import Loading from "./loading";
 
 // @lib
 import { cn } from "@/lib/utils";
@@ -42,7 +44,7 @@ export default function RootLayout({
               <SocketProvider>
                 <ReduxProvider>
                   <ModalProvider />
-                  {children}
+                  <Suspense fallback={<Loading />}>{children}</Suspense>
                 </ReduxProvider>
               </SocketProvider>
             </QueryProvider>
